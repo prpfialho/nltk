@@ -593,7 +593,7 @@ class BoxerOutputDrsParser(DrtParser):
 
     def parse_variable(self):
         var = self.token()
-        assert re.match('^[ex]\d+$', var), var
+        assert re.match('^[exps]\d+$', var), var
         return int(var[1:])
 
     def parse_index(self):
