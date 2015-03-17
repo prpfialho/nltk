@@ -376,7 +376,7 @@ class BoxerOutputDrsParser(DrtParser):
         self.assertToken(self.token(), ',')
         type = self.token()
         self.assertToken(self.token(), ',')
-        sense = int(self.token())
+        sense = self.token()
         self.assertToken(self.token(), ')')
         return lambda sent_index, word_indices: BoxerNamed(self.discourse_id, sent_index, word_indices, variable, name, type, sense)
 
